@@ -1,0 +1,36 @@
+/* Global Styles */
+body {
+    margin: 0;
+    background: #c9af98;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Link Buttons */
+.button {
+    width: 220px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #3a4660;
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-decoration: none;   /* removes underline */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 10px 0; /* spacing between buttons */
+}
+
+/* Hover Effect */
+.button:hover {
+    transform: scale(1.05);
+    background-color: #eeeeee;
+}

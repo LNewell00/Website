@@ -11,13 +11,22 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container, .education {
+.container {
     background-color: white;
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     max-width: 600px;
 }
+
+hr {
+    border: 5px solid #c9af98;
+    filter: brightness(100%);
+}
+.skillsHeader {
+    text-align: center;
+}
+
 
 /* Link Buttons */
 .button {

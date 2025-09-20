@@ -3,41 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="p-4">
 
-<button id="menuBtn" class="btn btn-dark mb-3" data-bs-toggle="collapse" data-bs-target="#demo">
+<!-- Welcome Button -->
+<button id="welcomeBtn" class="btn btn-dark mb-3" data-bs-toggle="collapse" data-bs-target="#menuOptions">
     Welcome!
 </button>
 
-<div id="demo" class="collapse">
-    <a href="pages/about.html" class="button">About Me</a>
-    <a href="pages/skills.html" class="button">Skills</a>
-    <a href="pages/education.html" class="button">Education</a>
-    <a href="pages/work.html" class="button">Work Experience</a>
+<!-- Main Menu Buttons -->
+<div id="menuOptions" class="collapse d-flex flex-column gap-2">
+    <button id="aboutBtn" class="btn btn-secondary menu-button" data-bs-toggle="collapse" data-bs-target="#aboutSection">About Me</button>
+    <button id="skillsBtn" class="btn btn-secondary menu-button" data-bs-toggle="collapse" data-bs-target="#skillsSection">Skills</button>
+    <button id="educationBtn" class="btn btn-secondary menu-button" data-bs-toggle="collapse" data-bs-target="#educationSection">Education</button>
+    <button id="workBtn" class="btn btn-secondary menu-button" data-bs-toggle="collapse" data-bs-target="#workSection">Work Experience</button>
 </div>
 
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const demo = document.getElementById("demo");
+<!-- Sections -->
 
-    // Check if they've visited before
-    if (localStorage.getItem("visitedBefore")) {
-        // Hide welcome button & show menu right away
-        menuBtn.style.display = "none";
-        demo.classList.add("show"); // Bootstrap 'collapse' uses 'show' to expand
-    }
+<section id="aboutSection" class="collapse section-content">
+    <div class="container">
+        <h1>About Me</h1>
+        <hr>
+        <p>Hi! I’m Logan Newell, a senior studying Computer Science with a strong passion for Artificial Intelligence, Distributed Systems, and Database Systems.
+        </p>
+        <p>
+            I’m very comfortable working in Linux environments, primarily Ubuntu and openSUSE, but I’m always excited to explore new distributions. My undergraduate experience has been mostly in Java, though I’ve also dabbled in HTML, C, SQL, and Rust. While I’m still building expertise in these, I’m confident in my ability to learn quickly, tackle problems, and overcome challenges. I genuinely love learning—any opportunity to explore new technology is a dream for me!
+        </p>
+        <p>
+            Outside of academics, I’m a big fan of gaming, cars, anime, and manga. I’m especially passionate about One Piece and enjoy slice-of-life stories.
+        </p>
+    </div>
+</section>
 
-    // When they click "Welcome!", hide it and remember they've visited
-    menuBtn.addEventListener("click", function() {
-        this.style.display = "none";
-        localStorage.setItem("visitedBefore", "true");
-    });
-</script>
+<section id="skillsSection" class="collapse section-content">
+    <div class="container">
+        <h1>Skills</h1>
+        <hr>
+        <h2>Programming Languages</h2>
+        <ul>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>SQL</li>
+        </ul>
+
+        <h2>Tools & Platforms</h2>
+        <ul>
+            <li>Git & GitHub</li>
+            <li>Azure</li>
+            <li>Cloudflare</li>
+            <li>IntelliJ</li>
+            <li>Eclipse</li>
+        </ul>
+
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Team Collaboration</li>
+            <li>Effective Communication</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+        </ul>
+    </div>
+</section>
+
+<section id="educationSection" class="collapse section-content">
+    <div class="container">
+        <h1>Education</h1>
+        <hr>
+        <h2>University of Arkansas - Fort Smith</h2>
+        <p>Bachelor of Science in Computer Science</p>
+        <p>Expected Graduation: December 2026</p>
+        <h2>Courses Taken</h2>
+        <ul>
+            <li>Introduction to Programming (Java)</li>
+            <li>Data Structures and Algorithms (Java)</li>
+            <li>Web Development (HTML, CSS, PHP)</li>
+            <li>Computer Networking</li>
+            <li>Computer Architecture</li>
+            <li>Artificial Intelligence (Java, ML Basics)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="workSection" class="collapse section-content">
+    <div class="container">
+        <h1>Work Experience</h1>
+        <hr>
+        <p>Add my work experience here.</p>
+    </div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </body>
 </html>

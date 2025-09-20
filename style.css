@@ -13,42 +13,38 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    padding: 1rem;
 }
 
-hr {
-    border: none;
-    border-top: 5px solid #c9af98 !important;
-    opacity: 1 !important; /* override Bootstrap */
-    margin: 2rem 0;
+/* ========== Section Containers ========== */
+.section-content,
+.section-content-work {
+    width: 100%;
+    max-width: 50rem; /* ~800px */
+    margin: 0 auto;
+    padding: 1.25rem;
 }
 
-/* ========== Containers ========== */
 .section-content .container,
 .section-content-work .container {
     background-color: white;
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+    width: 100%;
 }
 
-/* Work Section Layout - Flexbox */
 .section-content-work {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    padding: 20px;
 }
 
 .section-content-work .container {
-    flex: 1 1 350px; /* grow/shrink, min width 350px */
-    max-width: 500px; /* prevents containers from getting too wide */
+    flex: 1 1 22rem;
+    max-width: 23.75rem; /* ~380px */
 }
-
-
-
-.section-content .container { width: 800px; }
-.section-content-work .container { max-width: 380px; }
 
 /* ========== Navbar ========== */
 .custom-navbar {
@@ -58,7 +54,7 @@ hr {
 
 .custom-btn {
     background: white;
-    border: 2px solid black;
+    border: 0.125rem solid black;
     color: black;
     transition: all 0.3s ease;
 }
@@ -73,7 +69,7 @@ hr {
 #menuOptions {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
 }
 
@@ -83,96 +79,87 @@ hr {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-/* Specific Sizes */
-.menu-button {
-    width: 220px;
-    height: 60px;
-    background: #fff;
-    color: #3a4660;
+    width: 13.75rem; /* ~220px */
+    height: 3.75rem;   /* ~60px */
     font-size: 1.2rem;
 }
 
 #welcomeBtn {
-    width: 240px;
-    height: 65px;
+    width: 15rem;
+    height: 4.0625rem;
     font-size: 1.3rem;
-    color: #fff;
     background: #3a4660;
+    color: white;
 }
 
-/* Hover States */
 #welcomeBtn:hover {
     transform: scale(1.05);
     background: #2c3347;
 }
 
-#aboutBtn:hover   { transform: scale(1.05); background: #aa6666; }
-#skillsBtn:hover  { transform: scale(1.05); background: #66AAAA; }
-#educationBtn:hover { transform: scale(1.05); background: #8855AA; }
-#workBtn:hover    { transform: scale(1.05); background: #DFA94C; }
+#aboutBtn:hover {
+    transform: scale(1.05);
+    background: #aa6666;
+}
+
+#skillsBtn:hover {
+    transform: scale(1.05);
+    background: #66AAAA;
+}
+
+#educationBtn:hover {
+    transform: scale(1.05);
+    background: #8855AA;
+}
+
+#workBtn:hover {
+    transform: scale(1.05);
+    background: #DFA94C;
+}
 
 /* ========== Misc ========== */
 .skillsHeader {
     text-align: center;
 }
 
-
-/* Default desktop/tablet sizes */
-.section-content .container {
-    width: 800px;
-    max-width: 100%; /* prevent overflow */
+hr {
+    border: none;
+    border-top: 0.3125rem solid #c9af98 !important;
+    opacity: 1 !important;
+    margin: 2rem 0;
 }
 
-.section-content-work .container {
-    max-width: 380px;
-    width: 100%;
-}
-
-/* Responsive Adjustments for smaller screens */
+/* ========== Responsive Styles ========== */
 @media (max-width: 768px) {
-    .section-content .container {
-        width: 95%; /* shrink on tablets */
-    }
-
     .section-content-work {
-        flex-direction: column; /* stack vertically */
+        flex-direction: column;
         align-items: center;
-    }
-
-    .section-content-work .container {
-        flex: 1 1 100%;
-        max-width: 95%; /* keep padding from edges */
-    }
-
-    .menu-button,
-    #welcomeBtn {
-        width: 90%; /* make buttons fit better */
-        font-size: 1rem; /* slightly smaller text */
-    }
-}
-
-/* Even smaller (iPhones in portrait, <480px) */
-@media (max-width: 480px) {
-    body {
-        gap: 1rem;
-        padding: 1rem;
     }
 
     .section-content .container,
     .section-content-work .container {
-        width: 100%;
-        padding: 15px;
-        border-radius: 15px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        gap: 1rem;
     }
 
     .menu-button,
     #welcomeBtn {
-        height: 55px;
+        width: 100%;
+        height: 3.4375rem; /* ~55px */
         font-size: 1rem;
+    }
+
+    .section-content .container,
+    .section-content-work .container {
+        padding: 1rem;
+        border-radius: 1rem;
     }
 }

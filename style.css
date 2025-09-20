@@ -1,4 +1,8 @@
-/* Global Styles */
+/* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #c9af98;
@@ -11,93 +15,108 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Container for section content */
-.section-content .container {
+hr {
+    border: none;
+    border-top: 5px solid #c9af98 !important;
+    opacity: 1 !important; /* override Bootstrap */
+    margin: 2rem 0;
+}
+
+/* ========== Containers ========== */
+.section-content .container,
+.section-content-work .container {
     background-color: white;
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    max-width: 800px;
 }
 
-/* Section Divider */
-hr {
-    border: none;
-    border-top: 5px solid #c9af98 !important;
-    opacity: 1 !important;     /* remove Bootstrap’s faint opacity */
-    margin: 2rem 0;
+/* Work Section Layout - Flexbox */
+.section-content-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 20px;
 }
 
-/* Skills Header */
-.skillsHeader {
-    text-align: center;
+.section-content-work .container {
+    flex: 1 1 350px; /* grow/shrink, min width 350px */
+    max-width: 500px; /* prevents containers from getting too wide */
 }
 
-/* Main Menu Buttons Container */
+
+
+.section-content .container { width: 800px; }
+.section-content-work .container { max-width: 380px; }
+
+/* ========== Navbar ========== */
+.custom-navbar {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.custom-btn {
+    background: white;
+    border: 2px solid black;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+/* ========== Menu Buttons ========== */
 #menuOptions {
     display: flex;
     flex-direction: column;
-    gap: 10px;        /* spacing between buttons */
-    align-items: center; /* center buttons horizontally */
+    gap: 10px;
+    align-items: center;
 }
 
-/* Menu Buttons */
+.menu-button,
+#welcomeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Specific Sizes */
 .menu-button {
     width: 220px;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #fff;
     color: #3a4660;
-    font-weight: 900;
     font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Hover Effect for Buttons */
-#aboutBtn:hover {
-    transform: scale(1.05);
-    background-color: #aa6666;
-}
-
-#skillsBtn:hover {
-    transform: scale(1.05);
-    background-color: #66AAAA;
-}
-
-#educationBtn:hover {
-    transform: scale(1.05);
-    background-color: #8855AA;
-}
-
-#workBtn:hover {
-    transform: scale(1.05);
-    background-color: #DFA94C;
-}
-
-
-/* Welcome Button */
 #welcomeBtn {
     width: 240px;
     height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
     font-size: 1.3rem;
     color: #fff;
-    background-color: #3a4660;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    background: #3a4660;
 }
 
-/* Hover for Welcome Button */
+/* Hover States */
 #welcomeBtn:hover {
     transform: scale(1.05);
-    background-color: #2c3347;
+    background: #2c3347;
+}
+
+#aboutBtn:hover   { transform: scale(1.05); background: #aa6666; }
+#skillsBtn:hover  { transform: scale(1.05); background: #66AAAA; }
+#educationBtn:hover { transform: scale(1.05); background: #8855AA; }
+#workBtn:hover    { transform: scale(1.05); background: #DFA94C; }
+
+/* ========== Misc ========== */
+.skillsHeader {
+    text-align: center;
 }

@@ -120,3 +120,59 @@ hr {
 .skillsHeader {
     text-align: center;
 }
+
+
+/* Default desktop/tablet sizes */
+.section-content .container {
+    width: 800px;
+    max-width: 100%; /* prevent overflow */
+}
+
+.section-content-work .container {
+    max-width: 380px;
+    width: 100%;
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .section-content .container {
+        width: 95%; /* shrink on tablets */
+    }
+
+    .section-content-work {
+        flex-direction: column; /* stack vertically */
+        align-items: center;
+    }
+
+    .section-content-work .container {
+        flex: 1 1 100%;
+        max-width: 95%; /* keep padding from edges */
+    }
+
+    .menu-button,
+    #welcomeBtn {
+        width: 90%; /* make buttons fit better */
+        font-size: 1rem; /* slightly smaller text */
+    }
+}
+
+/* Even smaller (iPhones in portrait, <480px) */
+@media (max-width: 480px) {
+    body {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .section-content .container,
+    .section-content-work .container {
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .menu-button,
+    #welcomeBtn {
+        height: 55px;
+        font-size: 1rem;
+    }
+}

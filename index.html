@@ -1,122 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logan Newell | Portfolio</title>
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Logan Newell — Resume</title>
+    <style>
+        /* Basic, clean resume styles — ATS-friendly (no tables) */
+        :root{
+            --text:#111;
+            --muted:#555;
+            --accent:#0b6;
+            --max-width:900px;
+        }
+        html,body{height:100%;}
+        body{
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:var(--text);
+            margin:0;
+            padding:32px;
+            background:#fff;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.35;
+        }
+        .container{
+            max-width:var(--max-width);
+            margin:0 auto;
+        }
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:16px;
+            margin-bottom:18px;
+            flex-wrap:wrap;
+        }
+        h1{
+            font-size:1.6rem;
+            margin:0 0 6px 0;
+            letter-spacing:0.2px;
+        }
+        .contact{
+            font-size:0.95rem;
+            color:var(--muted);
+            margin:0;
+        }
+        section{margin:18px 0;}
+
+        h2{
+            font-size:1.05rem;
+            margin:0 0 8px 0;
+            letter-spacing:0.3px;
+            text-transform:uppercase;
+            font-weight:600;
+            color:#222;
+        }
+
+        .subhead{
+            display:flex;
+            justify-content:space-between;
+            gap:12px;
+            align-items:baseline;
+        }
+        .muted{color:var(--muted); font-size:0.95rem;}
+        .role{font-weight:600;}
+        .item{
+            margin:6px 0 10px 0;
+        }
+
+        ul{margin:6px 0 0 18px; padding:0;}
+        li{margin:4px 0;}
+
+        /* Optional two-column styling for non-critical lists (visual only) */
+        .two-column{
+            column-count:2;
+            column-gap:28px;
+        }
+        /* Simple responsive tweak */
+        @media (max-width:520px){
+            header{flex-direction:column; align-items:flex-start;}
+            .subhead{flex-direction:column; align-items:flex-start;}
+            .two-column{column-count:1;}
+        }
+
+        /* Small print/GPA */
+        .meta{font-size:0.95rem; color:var(--muted);}
+    </style>
 </head>
 <body>
+<div class="container">
+    <header>
+        <div>
+            <h1>Logan Newell</h1>
+            <p class="contact">logan@thenewells.net | <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank" rel="noopener noreferrer">linkedin.com/in/logan-newell-8382a22a7</a></p>
+        </div>
+        <div class="meta">
+            <!-- optional right-side info -->
+            <!-- Keep blank or add location/phone if desired -->
+        </div>
+    </header>
 
-<!-- Navbar -->
-<nav class="navbar sticky-top custom-navbar">
-    <div class="container d-flex gap-2 justify-content-center">
-        <a class="btn custom-btn" href="#aboutSection">About Me</a>
-        <a class="btn custom-btn" href="#skillsSection">Skills</a>
-        <a class="btn custom-btn" href="#educationSection">Education</a>
-        <a class="btn custom-btn" href="#workSection">Work Experience</a>
-    </div>
-</nav>
+    <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="item">
+            <div class="subhead">
+                <div>
+                    <div class="role">University of Arkansas - Fort Smith</div>
+                    <div class="muted">Bachelor of Science in Computer Science</div>
+                </div>
+                <div class="muted">GPA: 3.67</div>
+            </div>
 
-<!-- About Section -->
-<section id="aboutSection" class="section-content">
-    <div class="container">
-        <h1>About Me</h1>
-        <hr />
-        <p>Hi! I’m Logan Newell, a senior studying Computer Science with a strong passion for Artificial Intelligence, Distributed Systems, and Database Systems.</p>
-        <p>I’m very comfortable working in Linux environments, primarily Ubuntu and openSUSE, but I’m always excited to explore new distributions. My undergraduate experience has been mostly in Java, though I’ve also dabbled in HTML, C, SQL, and Rust. While I’m still building expertise in these, I’m confident in my ability to learn quickly, tackle problems, and overcome challenges. I genuinely love learning—any opportunity to explore new technology is a dream for me!</p>
-        <p>Outside of academics, I’m a big fan of gaming, cars, anime, and manga. I’m especially passionate about One Piece and enjoy slice-of-life stories.</p>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skillsSection" class="section-content">
-    <div class="container">
-        <h1>Skills</h1>
-        <hr />
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Programming Languages</h2>
+            <div style="margin-top:8px;">
+                <p style="margin:4px 0 6px 0; font-weight:600;">Achievements</p>
                 <ul>
-                    <li>Java</li>
-                    <li>HTML</li>
-                    <li>SQL</li>
+                    <li>Awarded Associates — December 2024</li>
+                    <li>Spring 2024 Chancellor's List</li>
+                    <li>Fall 2023 &amp; Fall 2024 Dean’s List</li>
                 </ul>
             </div>
-            <div class="col-md-4">
-                <h2>Tools & Platforms</h2>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Azure</li>
-                    <li>Cloudflare</li>
-                    <li>IntelliJ</li>
-                    <li>Eclipse</li>
-                </ul>
+
+            <div style="margin-top:10px;">
+                <p style="margin:4px 0 6px 0; font-weight:600;">Relevant Coursework</p>
+                <!-- If you want these displayed in two columns visually, keep the two-column class.
+                     Remove the class for strict single-column (better for some ATS). -->
+                <div class="two-column">
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Computer Architecture</li>
+                        <li>Algorithms and Data Structures</li>
+                        <li>Distributed Systems</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h2>Soft Skills</h2>
+        </div>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Relevant Course Projects</h2>
+        <div class="item">
+            <ul>
+                <li>Built a server with DHCP, Hadoop, Samba, and Apache Web Server.</li>
+                <li>Connected multiple machines via P2P networking.</li>
+                <li>Built spam/ham classification model and a linear regression model.</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top:12px;">Relevant Home Projects</h2>
+        <div class="item">
+            <ul>
+                <li>Host a static website using Azure and Cloudflare.</li>
+                <li>Linear regression model to simulate housing trends.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experience</h2>
+
+        <div class="item">
+            <div class="subhead">
+                <div>
+                    <div class="role">ArcBest Technologies</div>
+                    <div class="muted">Intern, Information Center Field Support</div>
+                </div>
+                <div class="muted">February 2024 - Present</div>
+            </div>
+
+            <div style="margin-top:8px;">
+                <p style="margin:4px 0 6px 0; font-weight:600;">Duties</p>
                 <ul>
-                    <li>Problem Solving</li>
-                    <li>Team Collaboration</li>
-                    <li>Effective Communication</li>
-                    <li>Time Management</li>
-                    <li>Adaptability</li>
+                    <li>Provision SIM cards.</li>
+                    <li>Keep devices up to date with the latest software updates.</li>
+                    <li>Set up desktops, switches, and Axis cameras for replacements.</li>
+                    <li>Deliver, install, and deploy desktops and laptops for internal employees.</li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Education Section -->
-<section id="educationSection" class="section-content">
-    <div class="container">
-        <h1>Education</h1>
-        <hr />
-        <h2>University of Arkansas – Fort Smith</h2>
-        <p>Bachelor of Science in Computer Science</p>
-        <p>Expected Graduation: December 2026</p>
-        <h2>Courses Taken</h2>
-        <ul>
-            <li>Introduction to Programming (Java)</li>
-            <li>Data Structures and Algorithms (Java)</li>
-            <li>Web Development (HTML, CSS, PHP)</li>
-            <li>Computer Networking</li>
-            <li>Computer Architecture</li>
-            <li>Artificial Intelligence (Java, ML Basics)</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Work Experience Section -->
-<section id="workSection" class="section-content-work">
-    <div class="container">
-        <h1>Intern Information Center</h1>
-        <hr />
-        <h2>ArcBest Technologies</h2>
-        <p><strong>February 2024 – Present</strong></p>
-        <h3>Duties</h3>
-        <ul>
-            <li>Provisioning Sim Cards</li>
-        </ul>
-    </div>
-
-    <div class="container">
-        <h1>Intern Information Center</h1>
-        <hr />
-        <h2>ArcBest Technologies</h2>
-        <p><strong>February 2024 – Present</strong></p>
-        <h3>Duties</h3>
-        <ul>
-            <li>Provisioning Sim Cards</li>
-        </ul>
-    </div>
-</section>
-
+    <!-- Optionally add more sections: Skills, Certifications, Links, etc. -->
+</div>
 </body>
 </html>

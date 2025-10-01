@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Logan Newell — Resume</title>
     <style>
-        /* Basic, clean resume styles — ATS-friendly (no tables) */
         :root{
             --text:#111;
             --muted:#555;
@@ -22,6 +21,7 @@
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
             line-height:1.35;
+            overflow:hidden;
         }
         .container{
             max-width:var(--max-width);
@@ -72,20 +72,33 @@
         ul{margin:6px 0 0 18px; padding:0;}
         li{margin:4px 0;}
 
-        /* Optional two-column styling for non-critical lists (visual only) */
         .two-column{
             column-count:2;
             column-gap:28px;
         }
-        /* Simple responsive tweak */
         @media (max-width:520px){
             header{flex-direction:column; align-items:flex-start;}
             .subhead{flex-direction:column; align-items:flex-start;}
             .two-column{column-count:1;}
         }
 
-        /* Small print/GPA */
         .meta{font-size:0.95rem; color:var(--muted);}
+
+        .top-button {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #0b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .top-button:hover {
+            background-color: #095;
+        }
     </style>
 </head>
 <body>
@@ -96,8 +109,7 @@
             <p class="contact">logan@thenewells.net | <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank" rel="noopener noreferrer">linkedin.com/in/logan-newell-8382a22a7</a></p>
         </div>
         <div class="meta">
-            <!-- optional right-side info -->
-            <!-- Keep blank or add location/phone if desired -->
+            <a href="AboutMe.html" class="top-button">About Me</a>
         </div>
     </header>
 
@@ -180,7 +192,6 @@
         </div>
     </section>
 
-    <!-- Optionally add more sections: Skills, Certifications, Links, etc. -->
 </div>
 </body>
 </html>

@@ -1,165 +1,57 @@
-/* ========== Global Styles ========== */
-* {
-    box-sizing: border-box;
+/* Custom font */
+@font-face {
+    font-family: 'Chococooky';
+    src: url('fonts/Chococooky.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
+    font-family: 'Chococooky', cursive, Arial, sans-serif;
     margin: 0;
-    background: #c9af98;
-    min-height: 100vh;
+    padding: 32px;
+    line-height: 1.4;
+    color: #111;
+    background: #fff;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    padding: 1rem;
+
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* ========== Section Containers ========== */
-.section-content,
-.section-content-work {
-    width: 100%;
-    max-width: 50rem; /* ~800px */
-    margin: 0 auto;
-    padding: 1.25rem;
+.container {
+    background-color: #ADEBB3;
+    padding: 5em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.section-content .container,
-.section-content-work .container {
-    background-color: white;
-    padding: 1.25rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
-    width: 100%;
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 4px;
 }
 
-.section-content-work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+h2 {
+    font-size: 1.3em;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
 
-.section-content-work .container {
-    flex: 1 1 22rem;
-    max-width: 23.75rem; /* ~380px */
+h3 {
+    font-size: 1.1em;
+    margin-top: 16px;
+    margin-bottom: 4px;
 }
 
-/* ========== Navbar ========== */
-.custom-navbar {
-    background-color: transparent !important;
-    box-shadow: none;
+p, li {
+    font-size: 1em;
+    margin: 4px 0;
 }
 
-.custom-btn {
-    background: white;
-    border: 0.125rem solid black;
-    color: black;
-    transition: all 0.3s ease;
-}
-
-.custom-btn:hover {
-    background: black;
-    color: white;
-    border-color: black;
-}
-
-/* ========== Menu Buttons ========== */
-#menuOptions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    align-items: center;
-}
-
-.menu-button,
-#welcomeBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    width: 13.75rem; /* ~220px */
-    height: 3.75rem;   /* ~60px */
-    font-size: 1.2rem;
-}
-
-#welcomeBtn {
-    width: 15rem;
-    height: 4.0625rem;
-    font-size: 1.3rem;
-    background: #3a4660;
-    color: white;
-}
-
-#welcomeBtn:hover {
-    transform: scale(1.05);
-    background: #2c3347;
-}
-
-#aboutBtn:hover {
-    transform: scale(1.05);
-    background: #aa6666;
-}
-
-#skillsBtn:hover {
-    transform: scale(1.05);
-    background: #66AAAA;
-}
-
-#educationBtn:hover {
-    transform: scale(1.05);
-    background: #8855AA;
-}
-
-#workBtn:hover {
-    transform: scale(1.05);
-    background: #DFA94C;
-}
-
-/* ========== Misc ========== */
-.skillsHeader {
-    text-align: center;
-}
-
-hr {
-    border: none;
-    border-top: 0.3125rem solid #c9af98 !important;
-    opacity: 1 !important;
-    margin: 2rem 0;
-}
-
-/* ========== Responsive Styles ========== */
-@media (max-width: 768px) {
-    .section-content-work {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-content .container,
-    .section-content-work .container {
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        gap: 1rem;
-    }
-
-    .menu-button,
-    #welcomeBtn {
-        width: 100%;
-        height: 3.4375rem; /* ~55px */
-        font-size: 1rem;
-    }
-
-    .section-content .container,
-    .section-content-work .container {
-        padding: 1rem;
-        border-radius: 1rem;
-    }
+ul {
+    padding-left: 20px;
+    margin: 4px 0;
 }

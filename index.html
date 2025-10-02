@@ -3,134 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="StyleSheets/AboutMeStyleSheet.css" />
+    <link rel="stylesheet" href="StyleSheets/style.css">
     <title>Logan Newell — Resume</title>
 </head>
 <body>
-<div class="container">
-    <header>
-        <div>
-            <h1>Logan Newell</h1>
-            <p class="contact">
-                logan@thenewells.net |
-                <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank" rel="noopener noreferrer">
-                    linkedin.com/in/logan-newell-8382a22a7
-                </a> | cloudnewell.com
-            </p>
-        </div>
-        <div class="meta">
-            <a href="AboutMe.html" class="top-button">About Me</a>
-        </div>
-    </header>
+<header id="header">
+    <h1 class="name">Logan Newell</h1>
+    <p class="contact">
+        logan@thenewells.net |
+        <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/logan-newell-8382a22a7
+        </a> | cloudnewell.com
+    </p>
+    <p><a href="AboutMe.html" class="top-button">About Me</a></p>
+</header>
 
-    <!-- Education -->
-    <section aria-labelledby="education-heading">
-        <h2 id="education-heading">Education</h2>
+<div id="education" class="section">
+    <h2 class="section-title">Education</h2>
 
-        <div class="item">
-            <div class="subhead">
-                <div>
-                    <div class="role">University of Arkansas - Fort Smith</div>
-                    <div class="muted">Bachelor of Science in Computer Science</div>
-                </div>
-                <div class="muted">GPA: 3.67</div>
-            </div>
+    <h3 class="school">University of Arkansas - Fort Smith</h3>
+    <p class="degree">Bachelor of Science in Computer Science | GPA: 3.67</p>
+    <p class="subheading">Achievements:</p>
+    <ul class="list">
+        <li>Spring 2024 Chancellor's List</li>
+        <li>Fall 2023 &amp; Fall 2024 Dean’s List</li>
+    </ul>
+    <p class="subheading">Relevant Coursework:</p>
+    <ul class="list">
+        <li>Artificial Intelligence</li>
+        <li>Computer Architecture</li>
+        <li>Algorithms and Data Structures</li>
+        <li>Distributed Systems</li>
+    </ul>
 
-            <div style="margin-top:8px;">
-                <p style="margin:4px 0 6px 0; font-weight:600;">Achievements</p>
-                <ul>
-                    <li>Spring 2024 Chancellor's List</li>
-                    <li>Fall 2023 &amp; Fall 2024 Dean’s List</li>
-                </ul>
-            </div>
+    <h3 class="school">University of Arkansas - Fort Smith</h3>
+    <p class="degree">Associates in General Studies | GPA: 3.67</p>
+</div>
 
-            <div style="margin-top:10px;">
-                <p style="margin:4px 0 6px 0; font-weight:600;">Relevant Coursework</p>
-                <div class="two-column">
-                    <ul>
-                        <li>Artificial Intelligence</li>
-                        <li>Computer Architecture</li>
-                        <li>Algorithms and Data Structures</li>
-                        <li>Distributed Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div id="projects" class="section">
+    <h2 class="section-title">Relevant Course Projects</h2>
+    <ul class="list">
+        <li>Built a server with DHCP, Hadoop, Samba, and Apache Web Server.</li>
+        <li>Connected multiple machines via P2P networking.</li>
+        <li>Built spam/ham classification model and a linear regression model.</li>
+    </ul>
 
-        <div class="item">
-            <div class="subhead">
-                <div>
-                    <div class="role">University of Arkansas - Fort Smith</div>
-                    <div class="muted">Bachelor of Science in Computer Science</div>
-                </div>
-                <div class="muted">GPA: 3.67</div>
-            </div>
+    <h2 class="section-title">Relevant Home Projects</h2>
+    <ul class="list">
+        <li>Host a static website using Azure and Cloudflare.</li>
+        <li>Linear regression model to simulate housing trends.</li>
+    </ul>
+</div>
 
-            <div style="margin-top:8px;">
-                <p style="margin:4px 0 6px 0; font-weight:600;">Achievements</p>
-                <ul>
-                    <li>Spring 2024 Chancellor's List</li>
-                    <li>Fall 2023 &amp; Fall 2024 Dean’s List</li>
-                </ul>
-            </div>
-        </div>
+<div id="experience" class="section">
+    <h2 class="section-title">Work Experience</h2>
 
-        <div class="item">
-            <div class="subhead">
-                <div>
-                    <div class="role">University of Arkansas - Fort Smith</div>
-                    <div class="muted">Associates in General Studies</div>
-                </div>
-                <div class="muted">GPA: 3.67</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Relevant Course Projects</h2>
-        <div class="item">
-            <ul>
-                <li>Built a server with DHCP, Hadoop, Samba, and Apache Web Server.</li>
-                <li>Connected multiple machines via P2P networking.</li>
-                <li>Built spam/ham classification model and a linear regression model.</li>
-            </ul>
-        </div>
-
-        <h2 style="margin-top:12px;">Relevant Home Projects</h2>
-        <div class="item">
-            <ul>
-                <li>Host a static website using Azure and Cloudflare.</li>
-                <li>Linear regression model to simulate housing trends.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Work Experience</h2>
-
-        <div class="item">
-            <div class="subhead">
-                <div>
-                    <div class="role">ArcBest Technologies</div>
-                    <div class="muted">Intern, Information Center Field Support</div>
-                </div>
-                <div class="muted">February 2024 - Present</div>
-            </div>
-
-            <div style="margin-top:8px;">
-                <p style="margin:4px 0 6px 0; font-weight:600;">Duties</p>
-                <ul>
-                    <li>Provision SIM cards.</li>
-                    <li>Keep devices up to date with the latest software updates.</li>
-                    <li>Set up desktops, switches, and Axis cameras for replacements.</li>
-                    <li>Deliver, install, and deploy desktops and laptops for internal employees.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+    <h3 class="company">ArcBest Technologies</h3>
+    <p class="position">Intern, Information Center Field Support | February 2024 - Present</p>
+    <p class="subheading">Duties:</p>
+    <ul class="list">
+        <li>Provision SIM cards.</li>
+        <li>Keep devices up to date with the latest software updates.</li>
+        <li>Set up desktops, switches, and Axis cameras for replacements.</li>
+        <li>Deliver, install, and deploy desktops and laptops for internal employees.</li>
+    </ul>
 </div>
 </body>
 </html>

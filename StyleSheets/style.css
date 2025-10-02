@@ -1,107 +1,77 @@
-/* Custom font */
-@font-face {
-    font-family: 'Chococooky';
-    src: url('../fonts/Chococooky.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* General page styles */
 body {
-    font-family: 'Chococooky', cursive, Arial, sans-serif;
-    margin: 0;
-    padding: 32px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     line-height: 1.5;
     color: #111;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
+    background-color: #fefefe;
 }
 
-.container {
-    background-color: #ADEBB3;
-    padding: 5em;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    max-width: 900px;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
+/* Header */
+#header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Headings */
-h1 {
-    font-size: 2.4em;
-    margin-bottom: 12px;
+.name {
+    font-size: 2em;
+    margin: 0;
 }
 
-h2 {
+.contact, .about-link {
+    font-size: 0.9em;
+}
+
+/* Section titles */
+.section-title {
     font-size: 1.5em;
-    margin-top: 32px;   /* bigger gap before section */
-    margin-bottom: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
 }
 
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 8px;
+/* Subheadings like Achievements, Relevant Coursework, Duties */
+.subheading {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
-/* Text & lists */
-p, li {
-    font-size: 1em;
-    margin: 6px 0;
+/* Schools / Companies */
+.school, .company {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 3px;
 }
 
-ul {
-    padding-left: 20px;
-    margin: 6px 0;
+/* Degrees / positions */
+.degree, .position {
+    margin: 0 0 5px 0;
+    font-style: italic;
 }
 
-/* Section & item spacing */
-section {
-    margin-top: 64px;    /* big gap between major sections */
-    margin-bottom: 64px;
+/* Lists */
+.list {
+    margin: 0 0 15px 20px;
+    padding: 0;
 }
 
-.item {
-    margin-bottom: 32px;  /* space between entries inside a section */
-}
-
-/* Button */
 .top-button {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 8px 14px;
-    background-color: #368df3;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #0b6;
     color: white;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: background 0.2s;
-    white-space: nowrap;
+    white-space: nowrap; /* prevent line breaks */
 }
 
 .top-button:hover {
     background-color: #095;
-}
-
-/* --- Mobile responsive --- */
-@media (max-width:520px){
-    body {padding:16px;}
-    .container {padding:2em;}
-    h1 {font-size:1.8em; text-align: center;}
-    h2 {font-size:1.3em; text-align: center;}
-    h3 {font-size:1.1em;}
-    .top-button {
-        position: static;
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 16px;
-    }
 }

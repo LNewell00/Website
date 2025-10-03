@@ -1,3 +1,6 @@
+/* -------------------------------
+   Base Page Styles
+--------------------------------*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
@@ -22,4 +25,49 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* -------------------------------
+   Floating Menu Styles
+--------------------------------*/
+/* Container for floating menu button and label */
+.floating-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Label next to button */
+.menu-label {
+    font-weight: bold;
+    color: #111111;
+}
+
+/* Hide label on small screens for compact view */
+@media (max-width: 576px) {
+    .menu-label {
+        display: none;
+    }
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    min-width: 180px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+/* Make dropdown items a bit more spacious */
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #000;
 }

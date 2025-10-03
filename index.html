@@ -5,67 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logan Newell - Resume</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="StyleSheets/style.css" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logan Newell</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+<!-- Floating button with name -->
+<div class="floating-menu">
+    <span class="menu-label fw-bold">Logan Newell</span>
+    <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ☰
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="btn btn-outline-light" href="other.html">More</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="dropdown-menu dropdown-menu-end p-2">
+            <li><a class="dropdown-item" href="index.html">Home</a></li>
+            <li><a class="dropdown-item" href="Pages/resume.html">Resume</a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://linkedin.com/in/logan-newell-8382a22a7">LinkedIn</a></li>
+        </ul>
     </div>
-</nav>
+</div>
 
 <div class="container mt-4">
-    <section>
-        <h2>Education</h2>
-        <p><strong>University of Arkansas - Fort Smith</strong><br />
-            Associates of General Studies (Completed Fall 2024)<br />
-            Bachelor of Science in Computer Science (Expected Dec 2026)<br />
-            GPA: 3.62<br />
-            Achievements: Chancellor’s List (Spring 2024), Dean’s List (Fall 2023 & Spring 2025)
-        </p>
-        <ul>
-            <li>Computer Architecture</li>
-            <li>Algorithms and Data Structures – Labs on runtimes and data structures</li>
-            <li>Team project: Tic-Tac-Toe-style game in NetBeans</li>
-            <li>Distributed Systems – Configured DHCP, Hadoop, Samba, Apache on OpenSUSE</li>
-            <li>Artificial Intelligence – Naive Bayes spam/ham classifier</li>
-            <li>Home Projects: Azure + Cloudflare static site, Linear Regression for housing prices</li>
-        </ul>
-    </section>
 
     <section>
-        <h2>Skills</h2>
-        <p><strong>Soft Skills:</strong> Teamwork, Initiative, Leadership, Problem Solving, Detail Oriented</p>
-        <p><strong>Programming:</strong> Java, HTML, PHP</p>
-        <p><strong>Tools:</strong> Git, Eclipse, VS Code, NetBeans, Office 365, Apache, YaST, Samba</p>
-    </section>
-
-    <section>
-        <h2>Work Experience</h2>
-        <h5>ArcBest Technologies (Feb 2024 – Present)</h5>
+        <h2>Pages I'm Working on</h2>
         <ul>
-            <li>Supported nationwide field ops and Navori rollout (3,000+ devices)</li>
-            <li>Provisioned SIM cards, deployed cameras and servers</li>
-            <li>Resolved IT tickets for Navori players, Zebra devices, distribution lists</li>
-            <li>Imaged desktops for MoLo and Field Support teams</li>
-        </ul>
-
-        <h5>College of the Ozarks – The Keeter Center (Jan 2022 – Mar 2023)</h5>
-        <ul>
-            <li>Prep Cook, Line Cook, Banquets & Catering Server</li>
-            <li>Supported inventory, special orders, large events</li>
-            <li>Served French-style catering to Board of Trustees</li>
-            <li>Worked Grape & Fall Festival</li>
+            <li><a href="Pages/HeaderDemo.html">Demo 1</a> - Work in Progress (Blank as of now)</li>
         </ul>
     </section>
 
@@ -75,6 +38,7 @@
             <a href="https://cloudnewell.com" target="_blank">cloudnewell.com</a>
         </p>
     </footer>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

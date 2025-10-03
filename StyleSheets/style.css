@@ -1,77 +1,25 @@
-/* General page styles */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.5;
-    color: #111;
-    background-color: #fefefe;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
-/* Header */
-#header {
-    text-align: center;
-    margin-bottom: 40px;
+h2 {
+    margin-top: 2rem;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
 }
 
-.name {
-    font-size: 2em;
-    margin: 0;
+section {
+    margin-bottom: 2rem;
 }
 
-.contact, .about-link {
-    font-size: 0.9em;
-}
-
-/* Section titles */
-.section-title {
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 4px;
-}
-
-/* Subheadings like Achievements, Relevant Coursework, Duties */
-.subheading {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-/* Schools / Companies */
-.school, .company {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 3px;
-}
-
-/* Degrees / positions */
-.degree, .position {
-    margin: 0 0 5px 0;
-    font-style: italic;
-}
-
-/* Lists */
-.list {
-    margin: 0 0 15px 20px;
-    padding: 0;
-}
-
-.top-button {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #0b6;
-    color: white;
+footer a {
+    margin: 0 0.5rem;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: background 0.2s;
-    white-space: nowrap; /* prevent line breaks */
+    color: #0d6efd;
 }
 
-.top-button:hover {
-    background-color: #095;
+footer a:hover {
+    text-decoration: underline;
 }

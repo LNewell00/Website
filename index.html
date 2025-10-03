@@ -1,72 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="StyleSheets/style.css">
-    <title>Logan Newell — Resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logan Newell - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header id="header">
-    <h1 class="name">Logan Newell</h1>
-    <p class="contact">
-        logan@thenewells.net |
-        <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/logan-newell-8382a22a7
-        </a> | cloudnewell.com
-    </p>
-    <p><a href="AboutMe.html" class="top-button">About Me</a></p>
-</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logan Newell</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-outline-light" href="other.html">More</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<div id="education" class="section">
-    <h2 class="section-title">Education</h2>
+<div class="container mt-4">
+    <section>
+        <h2>Education</h2>
+        <p><strong>University of Arkansas - Fort Smith</strong><br />
+            Associates of General Studies (Completed Fall 2024)<br />
+            Bachelor of Science in Computer Science (Expected Dec 2026)<br />
+            GPA: 3.62<br />
+            Achievements: Chancellor’s List (Spring 2024), Dean’s List (Fall 2023 & Spring 2025)
+        </p>
+        <ul>
+            <li>Computer Architecture</li>
+            <li>Algorithms and Data Structures – Labs on runtimes and data structures</li>
+            <li>Team project: Tic-Tac-Toe-style game in NetBeans</li>
+            <li>Distributed Systems – Configured DHCP, Hadoop, Samba, Apache on OpenSUSE</li>
+            <li>Artificial Intelligence – Naive Bayes spam/ham classifier</li>
+            <li>Home Projects: Azure + Cloudflare static site, Linear Regression for housing prices</li>
+        </ul>
+    </section>
 
-    <h3 class="school">University of Arkansas - Fort Smith</h3>
-    <p class="degree">Bachelor of Science in Computer Science | GPA: 3.67</p>
-    <p class="subheading">Achievements:</p>
-    <ul class="list">
-        <li>Spring 2024 Chancellor's List</li>
-        <li>Fall 2023 &amp; Fall 2024 Dean’s List</li>
-    </ul>
-    <p class="subheading">Relevant Coursework:</p>
-    <ul class="list">
-        <li>Artificial Intelligence</li>
-        <li>Computer Architecture</li>
-        <li>Algorithms and Data Structures</li>
-        <li>Distributed Systems</li>
-    </ul>
+    <section>
+        <h2>Skills</h2>
+        <p><strong>Soft Skills:</strong> Teamwork, Initiative, Leadership, Problem Solving, Detail Oriented</p>
+        <p><strong>Programming:</strong> Java, HTML, PHP</p>
+        <p><strong>Tools:</strong> Git, Eclipse, VS Code, NetBeans, Office 365, Apache, YaST, Samba</p>
+    </section>
 
-    <h3 class="school">University of Arkansas - Fort Smith</h3>
-    <p class="degree">Associates in General Studies | GPA: 3.67</p>
+    <section>
+        <h2>Work Experience</h2>
+        <h5>ArcBest Technologies (Feb 2024 – Present)</h5>
+        <ul>
+            <li>Supported nationwide field ops and Navori rollout (3,000+ devices)</li>
+            <li>Provisioned SIM cards, deployed cameras and servers</li>
+            <li>Resolved IT tickets for Navori players, Zebra devices, distribution lists</li>
+            <li>Imaged desktops for MoLo and Field Support teams</li>
+        </ul>
+
+        <h5>College of the Ozarks – The Keeter Center (Jan 2022 – Mar 2023)</h5>
+        <ul>
+            <li>Prep Cook, Line Cook, Banquets & Catering Server</li>
+            <li>Supported inventory, special orders, large events</li>
+            <li>Served French-style catering to Board of Trustees</li>
+            <li>Worked Grape & Fall Festival</li>
+        </ul>
+    </section>
+
+    <footer class="mt-5 text-center">
+        <p>Contact: <a href="mailto:logan@thenewells.net">logan@thenewells.net</a> |
+            <a href="https://linkedin.com/in/logan-newell-8382a22a7" target="_blank">LinkedIn</a> |
+            <a href="https://cloudnewell.com" target="_blank">cloudnewell.com</a>
+        </p>
+    </footer>
 </div>
 
-<div id="projects" class="section">
-    <h2 class="section-title">Relevant Course Projects</h2>
-    <ul class="list">
-        <li>Built a server with DHCP, Hadoop, Samba, and Apache Web Server.</li>
-        <li>Connected multiple machines via P2P networking.</li>
-        <li>Built spam/ham classification model and a linear regression model.</li>
-    </ul>
-
-    <h2 class="section-title">Relevant Home Projects</h2>
-    <ul class="list">
-        <li>Host a static website using Azure and Cloudflare.</li>
-        <li>Linear regression model to simulate housing trends.</li>
-    </ul>
-</div>
-
-<div id="experience" class="section">
-    <h2 class="section-title">Work Experience</h2>
-
-    <h3 class="company">ArcBest Technologies</h3>
-    <p class="position">Intern, Information Center Field Support | February 2024 - Present</p>
-    <p class="subheading">Duties:</p>
-    <ul class="list">
-        <li>Provision SIM cards.</li>
-        <li>Keep devices up to date with the latest software updates.</li>
-        <li>Set up desktops, switches, and Axis cameras for replacements.</li>
-        <li>Deliver, install, and deploy desktops and laptops for internal employees.</li>
-    </ul>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
